@@ -1,0 +1,36 @@
+{
+  "name": "Node_Sohoj_Recharge_Wrapper_Api",
+  "version": "1.0.0",
+  "description": "Sohoj Recharge Wrapper Restify NodeJS application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raqibul Hasan Moon",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.6.3",
+    "bunyan": "^1.8.14",
+    "circular-json": "^0.5.9",
+    "fs": "0.0.1-security",
+    "log-to-file": "^2.0.2",
+    "md5": "^2.3.0",
+    "moment": "^2.27.0",
+    "mysql": "^2.18.1",
+    "node-gcm": "^1.0.3",
+    "node-jose": "^1.1.4",
+    "request": "^2.88.2",
+    "restify": "^4.3.4",
+    "unicode-length": "^1.0.3",
+    "util": "^0.10.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "Sohoj,NodeJS,Wrapper,M21"
+  ],
+  "homepage": ""
+}

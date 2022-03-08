@@ -1,0 +1,33 @@
+# With version wise package installation.
+npm install <package>@<version>
+
+npm install restify;
+npm install request;
+npm install async;
+npm install bunyan;
+npm install circular-json;
+npm install fs;
+npm install log-to-file;
+npm install md5;
+npm install moment;
+npm install mysql;
+npm install node-gcm;
+npm install node-jose;
+npm install unicode-length;
+npm install util;
+
+
+"async": "^2.6.3",
+"bunyan": "^1.8.12",
+"circular-json": "^0.5.9",
+"fs": "0.0.1-security",
+"log-to-file": "^2.0.2",
+"md5": "^2.2.1",
+"moment": "^2.24.0",
+"mysql": "^2.18.1",
+"node-gcm": "^1.0.2",
+"node-jose": "^1.1.3",
+"request": "^2.88.0",
+"restify": "^4.1.1",
+"unicode-length": "^1.0.3",
+"util": "^0.10.4"
