@@ -1,7 +1,7 @@
 {
-  "name": "Node_Sohoj_Recharge_Wrapper_Api",
+  "name": "Node_Recharge_Wrapper_Api",
   "version": "1.0.0",
-  "description": "Sohoj Recharge Wrapper Restify NodeJS application",
+  "description": "Recharge Wrapper Restify NodeJS application",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,7 +30,7 @@
     "url": ""
   },
   "keywords": [
-    "Sohoj,NodeJS,Wrapper,M21"
+    "NodeJS,Wrapper,M21,Moon"
   ],
   "homepage": ""
 }
