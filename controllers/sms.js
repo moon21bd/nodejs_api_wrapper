@@ -63,7 +63,7 @@ function processSendSms(req, res, next) {
     }
 
     // send sms url
-    var SEND_SMS_URL = "https://digiapi.dotlines.com.sg/GameON/SohojDOBTopUp.php";
+    var SEND_SMS_URL = "https://api.example.com/smsSend.php";
 
     var reqURL = SEND_SMS_URL + "?ano=" + userName + "&text=" + encodeURI(smsText);
     logText += 'reqURL: ' + reqURL + logSeparator + smsText + logSeparator;
