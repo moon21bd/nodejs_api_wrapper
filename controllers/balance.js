@@ -16,7 +16,7 @@ var balance = new Balance();
 module.exports.route = function (app) {
     app.post(PATH + 'tp_balance_check', balance.tpBalanceCheck);
     app.post(PATH + 'tp_balance_add', balance.tpBalanceAdd);
-    app.post(PATH + 'lattu_sohoj_balance_add', balance.lattuSohojBalanceAdd);
+    app.post(PATH + 'lattu_balance_add', balance.lattuBalanceAdd);
 };
 
 // controller
@@ -214,20 +214,9 @@ function processBalanceAdd(req, res, next) {
 };
 
 
-function processLattuSohojBalanceAdd(req, res, next) {
+function processLattuBalanceAdd(req, res, next) {
 
     logText = 'dt ' + dt.getDateTimeFormatted() + logSeparator + JSON.stringify(req.params) + logSeparator;
-
-    /*let walletTypeId = req.params.walletTypeId;
-    if (func.inArray(walletTypeId, predefinedWalletTypeIds) == false) {
-        logText += "BalanceAdd: walletTypeId mismatch.";
-        fmm.logWrite(logText, topUpLogFilePath);
-
-        res.send(new Response({
-            "status": 500,
-            "error": "walletTypeId mismatch."
-        }));
-    }*/
 
     AuthTokenGeneratorForLattu(AUTH_TOKEN_GENERATE_API, function (err, accessToken) {
 
@@ -240,7 +229,7 @@ function processLattuSohojBalanceAdd(req, res, next) {
             myPwd = srcpwd;
         }
 
-        logText += "IS_PRODUCTION " + IS_PRODUCTION + logSeparator + ' srcuid : ' + mySrc + logSeparator + ' srcpwd : ' + myPwd + logSeparator + 'API_URL: ' + LATTU_SOHOJ_ADD_BALANCE + logSeparator + " accessToken: " + accessToken + logSeparator + "err: " + JSON.stringify(err);
+        logText += "IS_PRODUCTION " + IS_PRODUCTION + logSeparator + ' srcuid : ' + mySrc + logSeparator + ' srcpwd : ' + myPwd + logSeparator + 'API_URL: ' + LATTU__ADD_BALANCE + logSeparator + " accessToken: " + accessToken + logSeparator + "err: " + JSON.stringify(err);
 
         console.log('err : ', err)
         console.log('accessToken : ', accessToken)
@@ -275,11 +264,9 @@ function processLattuSohojBalanceAdd(req, res, next) {
 
             logText += "getEncryptedPayload CALLED " + 'err: ' + err + logSeparator + 'PAYLOAD: ' + resultPayload + logSeparator;
 
-            // var LATTU_SOHOJ_ADD_BALANCE_NEW = "http://45.249.100.23:3005/api/tp/add/balance";
-
             request({
                 method: 'post',
-                url: LATTU_SOHOJ_ADD_BALANCE,
+                url: LATTU__ADD_BALANCE,
                 form: JSON.stringify({
                     'payload': resultPayload
                 }),
@@ -295,14 +282,14 @@ function processLattuSohojBalanceAdd(req, res, next) {
 
                 if (err) {
 
-                    logText += 'LATTU_SOHOJ_BALANCE_ADD response err: ' + err + logSeparator;
+                    logText += 'LATTU_BALANCE_ADD response err: ' + err + logSeparator;
                     fmm.logWrite(logText, balanceLogFilePath);
                     var response = new Response(err);
                     res.send(response);
 
                 } else {
 
-                    logText += 'LATTU_SOHOJ_BALANCE_ADD response: ' + JSON.stringify(apiResp) + logSeparator;
+                    logText += 'LATTU_BALANCE_ADD response: ' + JSON.stringify(apiResp) + logSeparator;
                     fmm.logWrite(logText, balanceLogFilePath);
 
                     var response = new Response(apiResp);
@@ -396,7 +383,7 @@ Balance.prototype.tpBalanceAdd = function (req, res, next) {
     return next();
 };
 
-Balance.prototype.lattuSohojBalanceAdd = function (req, res, next) {
-    processLattuSohojBalanceAdd(req, res, next);
+Balance.prototype.lattuBalanceAdd = function (req, res, next) {
+    processLattuBalanceAdd(req, res, next);
     return next();
 };
