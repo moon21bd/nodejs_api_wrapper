@@ -6,27 +6,17 @@ PATH = '/api/'; // MY_API_PATH
 LISTEN_AT = 3000; // PORT OF NODEJS APPLICATION
 
 IS_PRODUCTION = false; // false = Staging, true = Production
-PRODUCT_SHOW_USERID_LIVE = "15881";
-PRODUCT_SHOW_USERID_LOCAL = "314";
+PRODUCT_SHOW_USERID_LIVE = "12345";
+PRODUCT_SHOW_USERID_LOCAL = "2345";
 
-vivrSiteLink = "https://bit.ly/2ZF337t";
+siteLink = "https://test.example.com";
 
 predefinedWalletTypeIds = [1, -1, -2]; // could be change at anytime
-hoichoiProductCategory = 13; // could be change for anytime
-
-/*
-// Sohoj API CREDENTIAL PRODUCTION
-srcuid = "digi_user"; // srcuid FOR PRODUCTION
-srcpwd = "Dg_ViVR123"; // srcpwd FOR PRODUCTION
-keyId = "41322220-09a1-11e9-ac09-4718e4c88b6f"; // Encryption Key Id (kid) FOR PRODUCTION
-EncryptionKeyId = "41322220-09a1-11e9-ac09-4718e4c88b6f"; // Encryption Key Id (kid) FOR PRODUCTION
-EncryptionKey = "BwsiOK3CzjVZV4KDjRKUoFHawgAXRkQPu9VSSwauA58"; // Encryption Key FOR PRODUCTION
-*/
 
 
-// Sohoj API CREDENTIAL STAGING
-srcuid = "sohoj_test_user"; // srcuid FOR STAGING
-srcpwd = "sohoj_test_password"; // srcpwd FOR STAGING
+// API CREDENTIAL STAGING
+srcuid = "test_user"; // srcuid FOR STAGING
+srcpwd = "test_password"; // srcpwd FOR STAGING
 keyId = "5bd485f0-09a1-11e9-aea3-1f560374ecce"; // Encryption Key Id (kid) FOR STAGING
 EncryptionKey = "Ld83ShdoDVVmdXFCrRB8N8c6tkLKttmtxM_9MmZpfos"; // Encryption Key FOR STAGING
 EncryptionKeyId = "5bd485f0-09a1-11e9-aea3-1f560374ecce"; // Encryption Key Id (kid) FOR STAGING
@@ -34,54 +24,26 @@ EncryptionKeyId = "5bd485f0-09a1-11e9-aea3-1f560374ecce"; // Encryption Key Id (
 global.clientId = "clientId";
 global.clientSecret = "clientSecret";
 global.grantType = "client_credentials";
-global.apiChannel = "digi_vivr";
+global.apiChannel = "api";
 
 
-// STAGING CREDENTIAL
-sohojUserId = 0;
-reportedUserId = 0;
+// API LIST
 
-// Sohoj API LIST
-
-API_HOST = 'http://45.249.100.23:3001/'; // STAGING URL
-// API_HOST = 'https://api.sohoj.my/'; // PRODUCTION URL
+API_HOST = 'http://localhost:3001/'; // STAGING URL
 API_BASE_PATH = API_HOST + 'api/';
 AUTH_TOKEN_GENERATE_API = API_HOST + 'auth/token';
-BD_RECHARGE_API = API_BASE_PATH + 'bd-recharge-api';
-TP_OPERATOR_IDENTIFY = API_BASE_PATH + 'tp/operator/identify';
-TOP_UP_CHECK = API_BASE_PATH + 'digi/top-up/check';
-TOP_UP_REQUEST = API_BASE_PATH + 'digi/top-up/request';
-TOP_UP_STATUS = API_BASE_PATH + 'top-up/status';
-TP_PRODUCT_SHOW = API_BASE_PATH + 'tp/product/show';
-DATAPACK_LIST_API = API_BASE_PATH + 'datapack/list';
-DATAPACK_CHECK_API = API_BASE_PATH + 'digi/datapack/check';
-DATAPACK_REQUEST_API = API_BASE_PATH + 'digi/data-pack/request';
-DATAPACK_STATUS_API = API_BASE_PATH + 'datapack/status';
-TP_REPORTS_GENERATE = API_BASE_PATH + 'tp/reports/generate';
-TP_BALANCE_CHECK = API_BASE_PATH + 'tp/vivr/balance/check';
-TP_BALANCE_ADD = API_BASE_PATH + 'tp/wallet/balance-add';
-HOICHOI_PRODUCT_REQUEST = API_BASE_PATH + 'digi/hoichoi/request';
-LATTU_SOHOJ_ADD_BALANCE = API_BASE_PATH + 'tp/add/balance';
+OPERATOR_IDENTIFY = API_BASE_PATH + 'tp/operator/identify';
 
 // Support API CREDENTIAL PRODUCTION
 supportGrantType = "password";
 supportClientId = 41;
 supportClientSecret = "#$eDjFqwV$%Wk$i#c*UMkde#2quLmV";
-supportUsername = "DiGiVIVRAPI";
-supportPassword = "@@S4TuSCbvBo";
-
-
-/*
-// Support API CREDENTIAL STAGING
-supportGrantType = "password";
-supportClientId = 3;
-supportClientSecret = "k_3*EY%PE:emX5'{b(%.G@>U{pbCnP";
 supportUsername = "TestUser";
-supportPassword = "test1234";
-*/
+supportPassword = "TestPasswd";
+
 
 // Support Ticket API List
-SUPPORT_API_HOST = 'http://45.125.222.108:3000/'; // PRODUCTION URL
+SUPPORT_API_HOST = 'http://localhost:3000/'; // PRODUCTION URL
 SUPPORT_TOKEN_REQUEST = SUPPORT_API_HOST + 'oauth/token';
 SUPPORT_TICKETS_CREATE = SUPPORT_API_HOST + 'tickets/create';
 SUPPORT_TICKETS_STATUS_BASE = SUPPORT_API_HOST + 'tickets/'; // tickets/90000011/status HERE NUMERIC IS TICKET NUMBER
