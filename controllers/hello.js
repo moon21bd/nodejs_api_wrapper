@@ -47,6 +47,6 @@ ResponseBuilder.prototype.setData = function (data) {
 
 
 Operator.prototype.tpOperatorIdentify = function (req, res, next) {
-    console.log('Hello SSD-Tech');
+    console.log('Hello Test !!');
     return next();
 };
